@@ -16,3 +16,8 @@ The .mat file contains:
 - Epoching
 - Identification of bad channels using the correlation method
 - Removal of bad channels
+
+## Time Domain Analysis: ERP waveforms and topographical maps (Within- Subject Analysis, i.e. Within Subject Averages (WSA))
+
+
+## Time Domain Analysis: ERP waveforms and topographical maps (Across- Subject Analysis, i.e. Grand Averages (GA))

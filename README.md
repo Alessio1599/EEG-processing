@@ -1,1 +1,9 @@
 # EEG-Preprocessing
+The aim of this repository is to apply some first steps of preprocessing to the EEG data.
+3-stimulus auditory oddball task
+The .mat file contains:
+- X: EEG data organized as a 2-D matrix whit size 𝑛 × 𝑚 where 𝑛 is the number of electrodes and 𝑚 the number of time samples.
+- ch_names: cell array containing the labels of the 𝑛 electrodes.
+- srate: containing the value of the sampling rate.
+- stim_samples: array containing the time samples at which the stimuli were applied
+- stim_types: cell array indicating the type of each applied stimulus (labels: ‘standard’, ‘target’, ‘distractor’)

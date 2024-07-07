@@ -7,3 +7,12 @@ The .mat file contains:
 - srate: containing the value of the sampling rate.
 - stim_samples: array containing the time samples at which the stimuli were applied
 - stim_types: cell array indicating the type of each applied stimulus (labels: ‘standard’, ‘target’, ‘distractor’)
+
+## Preproessing steps
+- Resampling
+- Linear detrending
+- Filtering (Low-pass, high-pass and notch filter)
+- Computation of the Power Spectral Density (PSD)
+- Epoching
+- Identification of bad channels using the correlation method
+- Removal of bad channels

@@ -7,21 +7,23 @@
   - [Linear detrending](#linear-detrending)
   - [Filtering](#filtering)
   - [Epoching](#epoching)
-  - [Identification of bad channels via correlation method](#identification-of-bad-channels-via-correlation-method)
+  - [Identification  and removal of bad channels via correlation method](#identification--and-removal-of-bad-channels-via-correlation-method)
   - [Artifact removal via Independent Component Analysis](#artifact-removal-via-independent-component-analysis)
   - [Interpolation of bad channels](#interpolation-of-bad-channels)
   - [Save the preprocessed data](#save-the-preprocessed-data)
-
-
+  
 ## Resampling
 
 ## Linear detrending
+Remove linear trends from the EEG data.
 
 ## Filtering
+Apply low-pass, high-pass, and notch filters to clean the signal.
 
 ## Epoching
+Segment the continuous EEG data into epochs around each stimulus.
 
-## Identification of bad channels via correlation method
+## Identification  and removal of bad channels via correlation method
 
 ## Artifact removal via Independent Component Analysis
 Independent Component Analysis (ICA)

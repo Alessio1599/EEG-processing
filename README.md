@@ -16,7 +16,6 @@ This repository is designed to apply initial preprocessing steps to EEG data col
   - [3-stimulus auditory oddball task](#3-stimulus-auditory-oddball-task)
   - [Another possible dataset](#another-possible-dataset)
   - [Data description](#data-description)
-  - [Preproessing steps](#preproessing-steps)
   - [Useful functions](#useful-functions)
 
 
@@ -55,15 +54,6 @@ The .mat file, sub-035_ses-01_task-Rest_eeg.mat, contains the following variable
 - srate: containing the value of the sampling rate.
 - stim_samples: array containing the time samples at which the stimuli were applied
 - stim_types: cell array indicating the type of each applied stimulus (labels: ‘standard’, ‘target’, ‘distractor’)
-
-## Preproessing steps
-- **Resampling**
-- **Linear detrending**: Remove linear trends from the EEG data.
-- **Filtering**: Apply low-pass, high-pass, and notch filters to clean the signal.
-- **Power Spectral Density (PSD) computation**
-- **Epoching**: Segment the continuous EEG data into epochs around each stimulus.
-- **Identification of bad channels** using the correlation method
-- **Removal of bad channels**:Exclude identified bad channels from the data.
 
 
 ## Useful functions

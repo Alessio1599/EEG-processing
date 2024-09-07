@@ -1,4 +1,8 @@
 # EEG-analysis
+> Check the codes that you wrote, on matlab, you wrote few comments
+> Move the files in the proper folders: preprocessing and time analysis
+> do the preprocessing steps
+
 This repository is designed to apply initial preprocessing steps to EEG data collected during a 3-stimulus auditory oddball task. The data preprocessing includes various signal processing techniques essential for preparing the EEG data for further analysis.
 ## 3-stimulus auditory oddball task
 The experiment consists of a 3-stimulus auditory oddball task, where the subject is exposed to three types of auditory stimuli:

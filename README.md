@@ -7,6 +7,17 @@
 
 > search for an online database for oddball task!
 
+# Table of content
+- [EEG-analysis](#eeg-analysis)
+- [Table of content](#table-of-content)
+- [Directory structure](#directory-structure)
+  - [3-stimulus auditory oddball task](#3-stimulus-auditory-oddball-task)
+  - [Another possible dataset](#another-possible-dataset)
+  - [Data description](#data-description)
+  - [Preproessing steps](#preproessing-steps)
+  - [Useful functions](#useful-functions)
+
+
 # Directory structure
 ```
 ├── LICENSE
@@ -23,6 +34,7 @@
 ```
 
 This repository is designed to apply initial preprocessing steps to EEG data collected during a 3-stimulus auditory oddball task. The data preprocessing includes various signal processing techniques essential for preparing the EEG data for further analysis.
+
 ## 3-stimulus auditory oddball task
 The experiment consists of a 3-stimulus auditory oddball task, where the subject is exposed to three types of auditory stimuli:
 
@@ -30,6 +42,10 @@ The experiment consists of a 3-stimulus auditory oddball task, where the subject
 - Target Stimulus: 660 Hz sinusoidal tone (15% of trials)
 - Distractor Stimulus: Naturalistic sound (15% of trials)
 Each stimulus lasts for 200 ms with a random inter-stimulus interval. The subject's task is to mentally count the target stimuli while ignoring the standard and distractor stimuli.
+
+## Another possible dataset
+- [ EEG data from an auditory oddball task. OpenNeuro](https://openneuro.org/datasets/ds003061/versions/1.1.1/file-display/task-P300_events.json)
+  - The only difference is that i don't think that is a matlab file
 
 ## Data description
 The .mat file, sub-035_ses-01_task-Rest_eeg.mat, contains the following variables:

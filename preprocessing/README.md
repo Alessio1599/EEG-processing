@@ -15,3 +15,5 @@ Independent Component Analysis (ICA)
 - EEGLab
 
 The artifacts were identified based on the time pattern, topographical map and PSD of the estimated Independent Components.
+
+## Interpolation of bad channels

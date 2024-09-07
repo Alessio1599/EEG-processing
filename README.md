@@ -34,7 +34,3 @@ The .mat file, sub-035_ses-01_task-Rest_eeg.mat, contains the following variable
 - filtfilt: Apply zero-phase digital filtering.
 - freqz: Plot the frequency response of a filter
 
-## Time Domain Analysis: ERP waveforms and topographical maps (Within- Subject Analysis, i.e. Within Subject Averages (WSA))
-
-
-## Time Domain Analysis: ERP waveforms and topographical maps (Across- Subject Analysis, i.e. Grand Averages (GA))

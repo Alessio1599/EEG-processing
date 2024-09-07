@@ -7,6 +7,21 @@
 
 > search for an online database for oddball task!
 
+# Directory structure
+```
+├── LICENSE
+├── README.md
+├── frequency_analysis
+│   └── README.md
+├── preprocessing
+│   ├── README.md
+│   ├── main.m
+│   └── preprocessing.m
+└── time_analysis
+    ├── README.md
+    └── time-domain-analysis.m
+```
+
 This repository is designed to apply initial preprocessing steps to EEG data collected during a 3-stimulus auditory oddball task. The data preprocessing includes various signal processing techniques essential for preparing the EEG data for further analysis.
 ## 3-stimulus auditory oddball task
 The experiment consists of a 3-stimulus auditory oddball task, where the subject is exposed to three types of auditory stimuli:

@@ -1,0 +1,1 @@
+basic EEG/MEG pipeline for event-related analysis

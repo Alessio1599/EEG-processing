@@ -8,7 +8,9 @@
     - Connectivity
     - statistics
 
-- There are two sections
+There are two big sections:
+- tutorials
+- examples
 
 
 ## Data

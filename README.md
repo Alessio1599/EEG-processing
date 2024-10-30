@@ -17,6 +17,7 @@ This repository is designed to apply initial preprocessing steps to EEG data col
   - [Another possible dataset](#another-possible-dataset)
   - [Data description](#data-description)
   - [Useful functions](#useful-functions)
+  - [Tools](#tools)
 
 
 ## Directory structure
@@ -64,3 +65,9 @@ The .mat file, sub-035_ses-01_task-Rest_eeg.mat, contains the following variable
 - filtfilt: Apply zero-phase digital filtering.
 - freqz: Plot the frequency response of a filter
 
+## Tools
+- EEGLAB
+- Fieldtrip
+- MNE
+
+> I can do the matlab and also the python implementation

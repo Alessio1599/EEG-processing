@@ -2,6 +2,9 @@
 
 ## Dataset
 
+## Code
+- [Shared jupyter notebook](https://colab.research.google.com/drive/1V3KVajtHHyLiDKOqCMKpzpI49lyHRNLH?usp=sharing)
+
 ## References
 - [google document shared by Young](https://docs.google.com/document/d/1KqqnxmIM_mRu48ym_MNZbpPktUpN0uaE3tCmpMIOJAk/edit?tab=t.0)
 - [MRI and EEG Data, Child Mind Institute](https://fcon_1000.projects.nitrc.org/indi/cmi_healthy_brain_network/MRI_EEG.html#Direct%20Down)

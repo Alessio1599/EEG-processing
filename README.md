@@ -1,4 +1,7 @@
 # EEG-analysis
+
+- I don't like coding in MATLAB, in a company is more used Python!!!
+
 > Check the codes that you wrote, on matlab, you wrote few comments
 
 > Move the files in the proper folders: preprocessing and time analysis

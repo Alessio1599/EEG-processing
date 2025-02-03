@@ -1,3 +1,11 @@
 Makefile
-DOCS
 .DS_Store
+TODO.md
+
+data/
+
+notebooks/
+
+archive/
+
+scripts/

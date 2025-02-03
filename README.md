@@ -1,15 +1,4 @@
 # EEG-analysis
-
-- I don't like coding in MATLAB, in a company is more used Python!!!
-
-> Check the codes that you wrote, on matlab, you wrote few comments
-
-> Move the files in the proper folders: preprocessing and time analysis
-
-> do the preprocessing steps
-
-> search for an online database for oddball task!
-
 This repository is designed to apply initial preprocessing steps to EEG data collected during a 3-stimulus auditory oddball task. The data preprocessing includes various signal processing techniques essential for preparing the EEG data for further analysis.
 
 ## Table of content
@@ -17,7 +6,6 @@ This repository is designed to apply initial preprocessing steps to EEG data col
   - [Table of content](#table-of-content)
   - [Directory structure](#directory-structure)
   - [3-stimulus auditory oddball task](#3-stimulus-auditory-oddball-task)
-  - [Another possible dataset](#another-possible-dataset)
   - [Data description](#data-description)
   - [Useful functions](#useful-functions)
   - [Tools](#tools)
@@ -25,17 +13,21 @@ This repository is designed to apply initial preprocessing steps to EEG data col
 
 ## Directory structure
 ```
-├── LICENSE
-├── README.md
-├── frequency_analysis
-│   └── README.md
-├── preprocessing
+eeg-processing/
+├── 1_preprocessing
 │   ├── README.md
 │   ├── main.m
 │   └── preprocessing.m
-└── time_analysis
-    ├── README.md
-    └── time-domain-analysis.m
+├── 2_time_analysis
+│   ├── README.md
+│   └── time-domain-analysis.m
+├── README.md
+└── utils
+    ├── compute_plot_PSDs.m
+    ├── plotICs.m
+    ├── plot_EEGs.m
+    ├── plot_IC.m
+    └── plot_PSDs.m
 ```
 
 
@@ -47,9 +39,6 @@ The experiment consists of a 3-stimulus auditory oddball task, where the subject
 - Distractor Stimulus: Naturalistic sound (15% of trials)
 Each stimulus lasts for 200 ms with a random inter-stimulus interval. The subject's task is to mentally count the target stimuli while ignoring the standard and distractor stimuli.
 
-## Another possible dataset
-- [ EEG data from an auditory oddball task. OpenNeuro](https://openneuro.org/datasets/ds003061/versions/1.1.1/file-display/task-P300_events.json)
-  - The only difference is that i don't think that is a matlab file
 
 ## Data description
 The .mat file, sub-035_ses-01_task-Rest_eeg.mat, contains the following variables:
@@ -72,5 +61,3 @@ The .mat file, sub-035_ses-01_task-Rest_eeg.mat, contains the following variable
 - EEGLAB
 - Fieldtrip
 - MNE
-
-> I can do the matlab and also the python implementation

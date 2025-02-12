@@ -1,6 +1,8 @@
 # EEG-analysis
 This repository is designed to apply initial preprocessing steps to EEG data collected during a 3-stimulus auditory oddball task. The data preprocessing includes various signal processing techniques essential for preparing the EEG data for further analysis.
 
+This project includes implementations in both Python (MNE) and MATLAB.
+
 ## Table of content
 - [EEG-analysis](#eeg-analysis)
   - [Table of content](#table-of-content)
@@ -9,6 +11,7 @@ This repository is designed to apply initial preprocessing steps to EEG data col
   - [Data description](#data-description)
   - [Useful functions](#useful-functions)
   - [Tools](#tools)
+    - [Setting Up the Configuration (Python)](#setting-up-the-configuration-python)
 
 
 ## Directory structure
@@ -41,12 +44,12 @@ Each stimulus lasts for 200 ms with a random inter-stimulus interval. The subjec
 
 
 ## Data description
-The .mat file, sub-035_ses-01_task-Rest_eeg.mat, contains the following variables:
-- X: EEG data organized as a 2-D matrix whit size 𝑛 × 𝑚 where 𝑛 is the number of electrodes and 𝑚 the number of time samples.
-- ch_names: cell array containing the labels of the 𝑛 electrodes.
-- srate: containing the value of the sampling rate.
-- stim_samples: array containing the time samples at which the stimuli were applied
-- stim_types: cell array indicating the type of each applied stimulus (labels: ‘standard’, ‘target’, ‘distractor’)
+The .mat file, `sub-035_ses-01_task-Rest_eeg.mat`, contains the following variables:
+- `X`: EEG data organized as a 2-D matrix whit size 𝑛 × 𝑚 where 𝑛 is the number of electrodes and 𝑚 the number of time samples.
+- `ch_names`: cell array containing the labels of the 𝑛 electrodes.
+- `srate`: containing the value of the sampling rate.
+- `stim_samples`: array containing the time samples at which the stimuli were applied
+- `stim_type`: cell array indicating the type of each applied stimulus (labels: ‘standard’, ‘target’, ‘distractor’)
 
 
 ## Useful functions
@@ -61,3 +64,11 @@ The .mat file, sub-035_ses-01_task-Rest_eeg.mat, contains the following variable
 - EEGLAB
 - Fieldtrip
 - MNE
+
+### Setting Up the Configuration (Python)
+
+Modify config.yml to adjust key parameters such as:
+- low cutoff frequency
+- high cutoff frequency
+- Notch filter frequency
+- Resample frequency

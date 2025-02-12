@@ -1,0 +1,15 @@
+#configs/config.yml
+
+# Data settings
+data:
+  raw_root: "/Users/alessioguarachi/Desktop/PROJECTS/_NEUROSCIENCE PROJECTS/_eeg-processing/data"          # Raw data path
+  processed_root: "/Users/alessioguarachi/Desktop/_ECG-HR/data/Preprocessed_Data"  # Preprocessed data save path
+
+
+# Preprocessing parameters
+preprocessing:
+  l_freq: 0.5   # Low cutoff frequency for filtering (Hz)
+  h_freq: null  # High cutoff frequency for filtering (null means no high-pass filter)
+  notch_freq: 60  # Notch filter frequency (Hz)
+  resample_freq: 250  # Resample frequency (Hz). Set null to skip resampling.
+  detrend: 1        # Linear detrending (0: no detrend, 1: linear, 2: quadratic)

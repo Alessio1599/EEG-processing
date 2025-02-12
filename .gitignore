@@ -1,11 +1,16 @@
-Makefile
+# Ignore system files
 .DS_Store
+
+# Ignore project metadata
+Makefile
 TODO.md
 
+# Ignore Python cache files
+__pycache__/
+
+# Ignore data files
 data/
 
 notebooks/
 
 archive/
-
-scripts/

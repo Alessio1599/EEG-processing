@@ -9,8 +9,10 @@ This project includes implementations in both Python (MNE) and MATLAB.
   - [Directory structure](#directory-structure)
   - [3-stimulus auditory oddball task](#3-stimulus-auditory-oddball-task)
   - [Data description](#data-description)
-  - [Useful functions](#useful-functions)
+  - [MATLAB Useful functions](#matlab-useful-functions)
   - [Tools](#tools)
+  - [Installation \& Setup](#installation--setup)
+  - [Configuration instructions](#configuration-instructions)
     - [Setting Up the Configuration (Python)](#setting-up-the-configuration-python)
 
 
@@ -52,22 +54,34 @@ The .mat file, `sub-035_ses-01_task-Rest_eeg.mat`, contains the following variab
 - `stim_type`: cell array indicating the type of each applied stimulus (labels: ‘standard’, ‘target’, ‘distractor’)
 
 
-## Useful functions
-- resample: Resamples the values of a uniformly sampled signal.
-- pwelch: Computes the power spectral density using Welch’s method.
-- ellipord and ellip: Design low-pass and high-pass elliptic filters.
-- iirnotch: Design a notch filter.
-- filtfilt: Apply zero-phase digital filtering.
-- freqz: Plot the frequency response of a filter
+## MATLAB Useful functions
+- `resample`: Resamples the values of a uniformly sampled signal.
+- `pwelch`: Computes the power spectral density using Welch’s method.
+- `ellipord` and ellip: Design low-pass and high-pass elliptic filters.
+- `iirnotch`: Design a notch filter.
+- `filtfilt`: Apply zero-phase digital filtering.
+- `freqz`: Plot the frequency response of a filter
 
 ## Tools
-- EEGLAB
+- [EEGLAB](https://eeglab.org)
 - Fieldtrip
-- MNE
+- [MNE, Open-source Python package for exploring, visualizing, and analyzing human neurophysiological data](https://mne.tools/stable/index.html)
+
+## Installation & Setup
+```bash
+git clone https://github.com/Alessio1599/EEG-processing.git
+cd EEG-processing
+```
+
+```bash
+python main.py
+```
+
+## Configuration instructions
+The repository includes a configs directory that contains configuration files for customizing the analysis workflow.
 
 ### Setting Up the Configuration (Python)
-
-Modify config.yml to adjust key parameters such as:
+Modify `config.yml` to adjust key parameters such as:
 - low cutoff frequency
 - high cutoff frequency
 - Notch filter frequency

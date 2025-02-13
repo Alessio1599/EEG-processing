@@ -5,6 +5,7 @@ import scipy
 import numpy as np
 import matplotlib.pyplot as plt
 import mne
+from mne_icalabel import label_components
 import logging
 from configs.config import cfg
 
@@ -26,6 +27,7 @@ def load_data(file_path: str) -> mne.io.RawArray:
 
     raw = mne.io.RawArray(data['X'], mne.create_info(ch_names=list(data['ch_names']), sfreq=data['srate']))
     raw.set_channel_types({ch: "eeg" for ch in raw.ch_names})
+    raw.set_montage("standard_1020")  # or "standard_1005" for a finer grid
     #print(raw.info)
     #print(raw.get_data().shape) 
     return raw
@@ -61,6 +63,37 @@ def preprocess(raw, cfg):
     return raw
 
 
+def ICA(cfg, raw):
+    logging.info("Running ICA...")
+    
+    # Fit ICA
+    ica = mne.preprocessing.ICA(n_components=cfg["preprocessing"]["n_ica_components"], random_state=97, method="infomax")
+    ica.fit(raw)
+
+    # Plot components before labeling (optional)
+    ica.plot_components()
+
+    # Use ICLabel to classify ICA components
+    ic_labels = label_components(raw, ica, method="iclabel")
+    
+    # Print classification results
+    logging.info(f"ICLabel classifications: {ic_labels['labels']}")
+    
+    # Identify artifact components
+    artifact_indices = [
+        idx for idx, label in enumerate(ic_labels["labels"])
+        if label in ["eye blink", "muscle", "heart"]
+    ]
+    
+    # Remove the identified artifact components
+    ica.exclude = artifact_indices
+    raw_clean = ica.apply(raw)
+    
+    logging.info(f"Removed {len(artifact_indices)} artifact components: {artifact_indices}")
+
+    return raw_clean, ica  # Return cleaned EEG data
+
+
 def main():
     """ Main function to load, preprocess, and visualize EEG data."""
  
@@ -78,11 +111,21 @@ def main():
     plt.show()
     
     # Apply filtering
-    raw = apply_filters(raw, cfg)
+    filt_raw = apply_filters(raw, cfg)
     
     # Plot filtered PSD
     raw.compute_psd(fmax=100).plot(amplitude=False)
     plt.show()
+    
+    # Common average referencing
+    filt_raw = filt_raw.set_eeg_reference("average")
+    
+    # ICA
+    raw_clean, ica = ICA(cfg, filt_raw)
+    #raw_clean.plot(duration=10, block=True)
+    
+    ica.plot_properties(raw, picks=[0, 1], verbose=False)
+
 
 if __name__ == "__main__":
     main()

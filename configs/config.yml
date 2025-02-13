@@ -11,5 +11,6 @@ preprocessing:
   l_freq: 0.5   # Low cutoff frequency for filtering (Hz)
   h_freq: null  # High cutoff frequency for filtering (null means no high-pass filter)
   notch_freq: 60  # Notch filter frequency (Hz)
-  resample_freq: 250  # Resample frequency (Hz). Set null to skip resampling.
+  resample_freq: 200  # Resample frequency (Hz). Set null to skip resampling.
   detrend: 1        # Linear detrending (0: no detrend, 1: linear, 2: quadratic)
+  n_ica_components: 20  # Number of ICA components

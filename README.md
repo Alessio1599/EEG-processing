@@ -9,6 +9,7 @@ This project includes implementations in both Python (MNE) and MATLAB.
   - [Directory structure](#directory-structure)
   - [3-stimulus auditory oddball task](#3-stimulus-auditory-oddball-task)
   - [Data description](#data-description)
+  - [Preprocessing steps](#preprocessing-steps)
   - [MATLAB Useful functions](#matlab-useful-functions)
   - [Tools](#tools)
   - [Installation \& Setup](#installation--setup)
@@ -53,6 +54,14 @@ The .mat file, `sub-035_ses-01_task-Rest_eeg.mat`, contains the following variab
 - `stim_samples`: array containing the time samples at which the stimuli were applied
 - `stim_type`: cell array indicating the type of each applied stimulus (labels: ‘standard’, ‘target’, ‘distractor’)
 
+## Preprocessing steps
+- Resampling
+- Linear detrending
+- Filtering
+- Epoching
+- Identification and removal of bad channels 
+- Artifact removal via Independent Component Analysis
+- Interpolation of bad channels
 
 ## MATLAB Useful functions
 - `resample`: Resamples the values of a uniformly sampled signal.
